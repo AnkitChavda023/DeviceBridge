@@ -191,22 +191,6 @@ DeviceBridge/
 `-- CMakeLists.txt         alternative build (not run)
 ```
 
-Documents in [docs/](docs/):
-
-| Document | What it is |
-|---|---|
-| [IMPLEMENTATION_GUIDE.md](docs/IMPLEMENTATION_GUIDE.md) | File by file: what each file does, code snippets, why it is done that way, alternatives |
-| [INTERVIEW_QUESTIONS.md](docs/INTERVIEW_QUESTIONS.md) | Interview questions and answers built from this project |
-| [requirements.md](docs/requirements.md) | Every requirement mapped to code and tests |
-| [architecture.md](docs/architecture.md) | Layers, ownership, thread-safety policy |
-| [device-lifecycle.md](docs/device-lifecycle.md) | Device state machine |
-| [transport-design.md](docs/transport-design.md) | Transport adapters |
-| [event-system.md](docs/event-system.md) | Event queue, overflow policy, shutdown rules |
-| [kernel-driver-design.md](docs/kernel-driver-design.md) | The C kernel module |
-| [testing-strategy.md](docs/testing-strategy.md) | What is tested and how |
-| [benchmarks.md](docs/benchmarks.md) | Measured numbers with the test environment |
-| [hardware-setup.md](docs/hardware-setup.md) | Moving from simulators to real hardware |
-
 ## Getting Started
 
 Pick the option that matches your computer. The framework (everything except the kernel driver) works in all three. The kernel driver needs extra steps, described in [Kernel driver](#kernel-driver).
