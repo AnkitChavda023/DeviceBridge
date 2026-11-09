@@ -1,0 +1,41 @@
+# Demonstration A: list devices and capabilities
+list
+info temp-virtual-01
+info gps-virtual-01
+
+# Demonstration B: read data
+open temp-virtual-01
+open accel-virtual-01
+open gps-virtual-01
+open test-virtual-01
+read temp-virtual-01
+read accel-virtual-01
+read gps-virtual-01
+read test-virtual-01
+set accel-virtual-01 range_g 8
+get accel-virtual-01
+
+# Demonstration C: asynchronous events
+subscribe
+start accel-virtual-01 200
+start temp-virtual-01 300
+sleep 1000
+stop accel-virtual-01
+stop temp-virtual-01
+
+# Demonstration E: failure and recovery
+inject temp-virtual-01 disconnect
+read temp-virtual-01
+status temp-virtual-01
+inject temp-virtual-01 reconnect
+recover temp-virtual-01
+open temp-virtual-01
+read temp-virtual-01
+stats temp-virtual-01
+
+# raw bytes on the virtual test device
+write test-virtual-01 hello
+readbytes test-virtual-01 6
+sleep 200
+unsubscribe
+quit

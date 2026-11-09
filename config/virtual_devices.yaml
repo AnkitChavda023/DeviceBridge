@@ -1,0 +1,29 @@
+devices:
+  - id: temp-virtual-01
+    type: temperature
+    transport: virtual
+    name: Virtual Temperature Sensor
+    sample_interval_ms: 200
+    timeout_ms: 500
+
+  - id: accel-virtual-01
+    type: accelerometer
+    transport: virtual
+    name: Virtual Accelerometer
+    range_g: 2
+    sample_interval_ms: 100
+    timeout_ms: 500
+
+  - id: gps-virtual-01
+    type: gps
+    transport: virtual
+    name: Virtual GPS Receiver
+    sample_interval_ms: 500
+    timeout_ms: 1000
+
+  - id: test-virtual-01
+    type: virtual
+    transport: virtual
+    name: Virtual Test Device
+    sample_interval_ms: 200
+    timeout_ms: 500
